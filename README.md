@@ -54,4 +54,4 @@ gcc -Wall -Wextra -Iinclude src/*.c -o detector_fraude
 
 ## Equipo
 
-[Nombres de los integrantes]
+Ma Fabiana Sánchez, Corina Vezga y Victoria Pereira
