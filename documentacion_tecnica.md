@@ -133,3 +133,34 @@ Para usar un archivo de transacciones distinto:
 <cuenta_origen> <cuenta_destino> <monto>
 ...
 ```
+
+## 7. Evidencia de pruebas realizadas
+
+Se probó el programa con el archivo de ejemplo `data/transacciones.txt`
+(10 cuentas, 10 transacciones). Resultado obtenido:
+
+\```
+--- Grafo de transacciones (10 cuentas) ---
+Cuenta 0 -> [6, $400.00] [1, $1500.50]
+Cuenta 1 -> [2, $2300.00]
+Cuenta 2 -> [0, $900.25]
+Cuenta 3 -> [4, $500.00]
+Cuenta 4 -> [5, $700.00]
+Cuenta 5 -> [3, $300.00]
+Cuenta 6 -> [7, $200.00]
+Cuenta 7 -> [8, $150.00]
+Cuenta 8 -> [6, $1200.00]
+
+=== 3 ciclo(s) sospechoso(s) detectado(s), ordenados por monto ===
+Ciclo #1 | 3 cuentas | monto total: $4700.75
+  Ruta: 0 -> 1 -> 2 -> 0 (vuelve al origen)
+Ciclo #2 | 3 cuentas | monto total: $1550.00
+  Ruta: 6 -> 7 -> 8 -> 6 (vuelve al origen)
+Ciclo #3 | 3 cuentas | monto total: $1500.00
+  Ruta: 3 -> 4 -> 5 -> 3 (vuelve al origen)
+\```
+
+Se verificó que los 3 ciclos detectados corresponden efectivamente a
+subconjuntos de cuentas donde el dinero regresa a su origen, y que se
+ordenan correctamente de mayor a menor monto total. El programa compiló
+sin errores ni warnings con `gcc -Wall -Wextra`.
