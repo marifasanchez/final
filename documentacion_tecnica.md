@@ -1,4 +1,4 @@
-# Documentación Técnica
+# Documentación Técnica | detector-fraude-bancario
 ## Detector de Fraude en Transacciones Bancarias mediante Análisis de Ciclos en Grafos
 
 ## 1. Descripción general
