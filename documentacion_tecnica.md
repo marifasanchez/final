@@ -11,12 +11,11 @@ varias transacciones, regresa a la cuenta de origen. Estos ciclos se reportan
 ordenados por el monto total involucrado, de mayor a menor, para priorizar la
 revisión de los casos más significativos.
 
-Este enfoque está inspirado directamente en Bodaghi & Teimourpour (2019),
-*"The detection of professional fraud in automobile insurance using social
-network analysis"*, quienes demuestran que buscar ciclos en un grafo es más
-eficiente y preciso que buscar comunidades densas para detectar fraude
-organizado, ya que las comunidades incluyen muchas entidades no fraudulentas
-mientras que los ciclos son estructuras mucho más específicas.
+Este enfoque está inspirado directamente en el trabajo de Bodaghi y Teimourpour (2019), quienes 
+en su investigación titulada "The detection of professional fraud in automobile insurance using social 
+network analysis" demuestran que buscar ciclos en un grafo es más eficiente y preciso que buscar 
+comunidades densas para detectar fraude organizado, ya que las comunidades incluyen muchas 
+entidades no fraudulentas mientras que los ciclos son estructuras mucho más específicas.
 
 ## 2. Estructuras de datos (TAD)
 
@@ -164,3 +163,6 @@ Se verificó que los 3 ciclos detectados corresponden efectivamente a
 subconjuntos de cuentas donde el dinero regresa a su origen, y que se
 ordenan correctamente de mayor a menor monto total. El programa compiló
 sin errores ni warnings con `gcc -Wall -Wextra`.
+
+## 8. Referencias
+Bodaghi, A., & Teimourpour, B. (2019). The detection of professional fraud in automobile insurance using social network analysis. (Manuscrito no publicado / Trabajo de investigación). School of Industrial and Systems Engineering, Tarbiat Modares University, Irán.
